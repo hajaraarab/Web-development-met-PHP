@@ -24,8 +24,8 @@
 				<h3><?= $articles['title']; ?></h3> 	
 						
 				<p><?= $articles['article']; ?></p>
-						
-				<a href="#" class="readmore">read more</a> 
+				
+				<button type="submit" class="articleButton">Read More</button>
 			</article>
 		<?php endfor; ?>
 

@@ -7,9 +7,11 @@
 	<title>Document</title>
 </head>
 <body>
-	<header>
-		<h2>photo</h2>
-		<img src="achtergrond.jpg" alt="foto" id="foto"/>
-	</header>
+
+<header>
+	<h2>Header Photo</h2>
+	<img src="achtergrond.jpg" alt="foto" id="foto"/>
+</header>
+
 </body>
 </html>

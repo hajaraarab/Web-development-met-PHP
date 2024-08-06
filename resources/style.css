@@ -1,195 +1,266 @@
-div,nav,header,main,section,footer{
-padding:1rem;
-margin:1rem;
+/* Algemene stijlen */
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin: 0 auto;
 }
 
-body{
-font-family:'Montserrat', sans-serif;
-width:80%;
-margin:0 auto;
-display: grid;
-grid-template-columns:1fr 1fr;
-grid-template-rows:6rem 60rem 40rem 30rem 42rem 6rem;
-grid-template-areas:
-		"logo nav"
-		"photo photo"
-		"header main"
-		"projects projects"
-		"contactform contactform"
-		"footer footer"
+.message-container {
+	border-bottom: 2px solid red;
+    color: red; 
+    text-align: center;
+    font-weight: bold;
+	border-radius: 3px; /* Rondere hoeken */
+	margin-bottom: 50px; 
 }
-#container{
-	font-family:'Montserrat', sans-serif;
-}
-
-#logo{
-	grid-area: logo;
-}
-nav{
-	grid-area:nav;
-}
-header{
-	grid-area: header;
-	width: 90%;
-}
-header #foto{
-	max-width: 100%;
-	margin-top: 40px;
-}
-#photo{
-	grid-area:photo;
-	background: #0A073F;
-}
-#mainPhoto{
-	text-align: center;
-	max-width: 95%;
-}
-#bigPhoto{
-	text-align: center;
-	margin-top: 60px;
-}
-main{
-	grid-area:main;
-}
-#projects{
-	grid-area:projects;
-	background-color: #0A073F;
-}
-#projects, #photo h2{
-	color: white;
-}
-#projects h2:after, #photo h2:after{
-	border-bottom-color: white;
-}
-#contactform{
-	grid-area:contactform;
-}
-footer{
-	grid-area:footer;
-	background-color: #0A073F;
-	color: white;
-	text-align: center;
-	margin: 0;
+/* Container stijlen */
+#content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Twee gelijke kolommen */
+    gap: 1rem; /* Optioneel, ruimte tussen de kolommen */
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 90%;
 }
 
-h1{
-	text-transform: uppercase;
-	margin: 0;
-	color: #0A073F;
-}
-h2
-{
-	text-transform: uppercase;
-}
-h2:after{
-	content:"";
-	display: block;
-	border-bottom:3px solid #191921;
-	width:40px;
-	padding-top:10px;
-}
-h3{
-	text-transform: uppercase;
-	font-size:1rem;
-}
-p{
-	line-height:1.5rem;
-	margin:1.875rem 0px;
-	font-size:0.9rem;
+/* Sectie stijlen */
+#photo {
+    border-bottom-color: white;
+    width: 100%; 
 }
 
-nav ul li{
-	display: inline-grid;
-	margin:0.6rem;
+main {
+	margin-top: 20px; 
+    padding: 1rem;
+    width: 100%; 
+	align-items: right; 
 }
-nav{
-	justify-self:end;
+main p{
+	margin-top: 50px; 
 }
-nav ul li a{
-	text-transform: uppercase;
-	font-size:0.8rem;
-	color:#191921;
-	text-decoration: none;
-}
-nav ul li a:before{
-	content:"// "; /*LET OP DE DUBBEL PUNT*/
-}
-nav ul li a.active{
-	color: #0A073F; /*de link waar momenteel op zit veranderen van kleur*/
-}
-
-#projectItem{
-	display:grid;
-	grid-template-columns: repeat(4,1fr);
-	color: white;
+main h2:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #191921;
+    width: 40px;
+    padding-top: 10px;
+    position: absolute; /* Absolute positioning om het element te verplaatsen */
+    right: 0; /* Plaatst het element aan de rechterkant */
+	margin-right: 160px; 
 }
 
+/* Logo en navigatie */
+#logo {
+    float: left;
+    width: 50%;
+    padding: 1rem;
+}
 
-/* CONTACTFORMULIER */
+nav {
+    float: right;
+    width: 50%;
+    padding: 1rem;
+    text-align: right;
+}
 
-form{
-	width: 90%;
-	background: white;
-	border-radius: 3px;
-	box-sizing:border-box;
-	margin-left: 30px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
-#contactform h2{
-	margin-bottom: 40px;
+
+nav ul li {
+    display: inline-block;
+    margin: 0.6rem;
 }
-label{
-	display: block;
-	margin: 20px 0;
+
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #191921;
+    text-decoration: none;
 }
-input, textarea{
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	outline: none;
-	resize: none;
-	border: none;
-	border-bottom: 1px solid #D3D3D3;
+
+nav ul li a:before {
+    content: "// "; /*LET OP DE DUBBEL PUNT*/
 }
-input[type="text"]:focus,textarea:focus{
-	border-bottom: 1px solid rgb(255,0,106);
+
+nav ul li a.active {
+    color: #0A073F; /*de link waar momenteel op zit veranderen van kleur*/
 }
-textarea::-webkit-scrollbar{
-	width:4px;
+
+/* Header */
+header {
+    background: #0A073F;
+    clear: both;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    color: white; 
 }
-textarea::-webkit-scrollbar-thumb{
-	background-color:rgb(255,0,106);
+
+header #foto {
+    max-width: 100%;
+    margin-top: 40px;
+    border-bottom-color: white;
 }
-.center{
-	text-align: center;
+
+/* Foto sectie */
+#photo {
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom-color: white;
 }
-input[type="submit"]{
-	margin-top: 30px;
-	width: 90%;
-	max-width: 200px;
-	background: #191921;
-	text-transform: uppercase;
-	color: white;
-	font-size:14px;
-	cursor: pointer;
-	border-radius: 3px;
+
+#mainPhoto {
+    max-width: 95%;
 }
-.error{
-	color: red;
+
+#bigPhoto {
+    margin-top: 60px;
+    border-bottom-color: white;
 }
-.error-border{
-	border-bottom: 1px solid red;
+
+/* Main content */
+main {
+    text-align: right;
 }
-#succes{
-	color: #28A745;
+
+/* Projecten sectie */
+#projects {
+    background-color: #0A073F;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
 }
-/* EINDE CONTACTFORMULIER */
+
+#projects h2:after, #bigPhoto h2:after {
+    border-bottom-color: white;
+}
+
+#projectItem {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#projectItem article {
+    flex: 1 1 22%;
+    margin: 1%;
+}
+
+/* Contactformulier */
+#contactform {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+form {
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#contactform h2 {
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-bottom: 1px solid rgb(255,0,106);
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(255,0,106);
+}
+
+.center {
+    text-align: center;
+}
+
+.formButton {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 200px;
+    background: #191921;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
 
 
-a.readmore{
-	color: black;
-	background-color:white;
-	text-transform: uppercase;
-	padding: 5px 20px;
-	text-decoration: none;
-	font-weight: 550;
+#success {
+    color: #28A745;
+}
+
+/* Footer */
+footer {
+    background-color: #0A073F;
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+	margin-bottom: -70px; 
+}
+
+/* Algemene tekststijlen */
+h1 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #0A073F;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #191921;
+    width: 40px;
+    padding-top: 10px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 1.875rem 0;
+    font-size: 0.9rem;
+}
+
+.articleButton {
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-weight: 550;
 }

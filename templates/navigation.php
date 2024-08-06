@@ -7,17 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="logo">
-        <h1>Hajar aarab</h1>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#mail">main</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contractform">contactform</a></li>
-        </ul>
-    </nav>
+<div id="logo">
+	<h1>hajar aarab</h1>
+</div>
+		
+<nav>
+	<ul>
+		<li><a href="#home">home</a></li>
+		<li><a href="#header">header</a></li>
+		<li><a href="#main">main</a></li>
+		<li><a href="#projects">projects</a></li>
+		<li><a href="#contactform">contactform</a></li>
+	</ul>
+</nav>
 </body>
 </html>
