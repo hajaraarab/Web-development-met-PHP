@@ -1,4 +1,4 @@
-#container > div,nav,header,main,section,footer{
+div,nav,header,main,section,footer{
 padding:1rem;
 margin:1rem;
 }
