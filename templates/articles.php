@@ -28,7 +28,6 @@
 				<button type="submit" class="articleButton">Read More</button>
 			</article>
 		<?php endfor; ?>
-
 	</section>
 					
 	</section>
